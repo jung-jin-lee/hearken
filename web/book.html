@@ -1,0 +1,559 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>도서 읽기</title>
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/accessibility.css">
+  <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+  <a href="#main" class="skip-link">본문으로 이동</a>
+
+  <header class="site-header" role="banner">
+    <div class="container">
+      <a href="index.html" class="site-title" aria-label="Hearken 들음 홈">Hearken 들음</a>
+      <nav class="main-nav" role="navigation" aria-label="메뉴">
+        <ul>
+          <li><a href="books.html" aria-current="page">도서관</a></li>
+          <li><a href="bible.html">성경</a></li>
+          <li><a href="devotional.html">매일묵상</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main" role="main">
+    <div class="container">
+      <article id="book-content" aria-label="도서 내용">
+        <h1 id="book-title">로드 중...</h1>
+        <p id="book-meta" class="prose" style="color: var(--color-text-muted); margin-bottom: 0.5rem;"></p>
+
+        <div role="note" aria-label="단축키 안내" class="shortcut-hint prose" style="margin-bottom: 1.5rem; padding: 0.75rem; background: var(--color-primary-light); border-radius: 0.375rem;">
+          Space 재생과 정지, 좌우 화살표 섹션 이동
+        </div>
+
+        <div id="resume-banner" role="alert" aria-live="polite" style="display: none; margin-bottom: 1.5rem; padding: 1rem; background: var(--color-surface, #f0f4ff); border: 2px solid var(--color-primary, #3366cc); border-radius: 0.5rem;">
+          <p id="resume-info" style="margin: 0 0 0.75rem 0; font-weight: bold;"></p>
+          <div style="display: flex; gap: 0.75rem; flex-wrap: wrap;">
+            <button id="btn-resume" style="padding: 0.5rem 1.25rem; background: var(--color-primary, #3366cc); color: #fff; border: none; border-radius: 0.375rem; cursor: pointer; font-size: 1rem;">이어서 듣기</button>
+            <button id="btn-restart" style="padding: 0.5rem 1.25rem; background: transparent; border: 2px solid var(--color-primary, #3366cc); border-radius: 0.375rem; cursor: pointer; font-size: 1rem;">처음부터 듣기</button>
+          </div>
+        </div>
+
+        <nav class="chapter-nav" aria-label="챕터 이동">
+          <a href="#" id="prev-chapter-top" aria-label="이전 장">이전 장</a>
+          <span id="chapter-indicator-top"></span>
+          <a href="#" id="next-chapter-top" aria-label="다음 장">다음 장</a>
+        </nav>
+
+        <section class="content-section" aria-label="현대어 번역">
+          <h2>현대어 번역</h2>
+          <div id="section-translation" class="prose"></div>
+        </section>
+
+        <section class="content-section" aria-label="요약">
+          <h2>요약</h2>
+          <div id="section-summary" class="prose"></div>
+        </section>
+
+        <section class="content-section" aria-label="핵심 포인트">
+          <h2>핵심 포인트</h2>
+          <ul id="section-keypoints" class="prose"></ul>
+        </section>
+
+        <section class="content-section" aria-label="어려운 용어">
+          <h2>어려운 용어 풀이</h2>
+          <dl id="section-terms" class="prose"></dl>
+        </section>
+
+        <section class="content-section" aria-label="묵상">
+          <h2>묵상</h2>
+          <div id="section-reflection" class="prose"></div>
+        </section>
+      </article>
+
+      <nav class="chapter-nav" aria-label="챕터 이동">
+        <a href="#" id="prev-chapter" aria-label="이전 장">이전 장</a>
+        <span id="chapter-indicator"></span>
+        <a href="#" id="next-chapter" aria-label="다음 장">다음 장</a>
+      </nav>
+    </div>
+  </main>
+
+  <div class="tts-controls" role="region" aria-label="음성 재생">
+    <button id="btn-prev" aria-label="이전 섹션">&#9198;</button>
+    <button id="btn-play" aria-label="재생">&#9654;</button>
+    <button id="btn-stop" aria-label="정지">&#9632;</button>
+    <button id="btn-next" aria-label="다음 섹션">&#9197;</button>
+    <select id="voice-select" aria-label="음성 선택">
+      <option value="">보이스 로드 중...</option>
+    </select>
+    <select id="speed-select" aria-label="읽기 속도">
+      <option value="0.5">0.5배</option>
+      <option value="0.75">0.75배</option>
+      <option value="1" selected>1배</option>
+      <option value="1.25">1.25배</option>
+      <option value="1.5">1.5배</option>
+      <option value="2">2배</option>
+    </select>
+    <div id="tts-status" class="tts-status" role="status" aria-live="polite">준비됨</div>
+  </div>
+
+  <script src="js/tts-controller.js"></script>
+  <script>
+    var params = new URLSearchParams(location.search);
+    var slug = params.get('slug') || 'practice-of-presence';
+    var ch = parseInt(params.get('ch') || '1', 10);
+
+    var BOOK_META = {
+      'practice-of-presence': {
+        title: '하나님의 임재 연습',
+        author: '로렌스 형제',
+        totalChapters: 15
+      },
+      'pilgrims-progress': {
+        title: '천로역정',
+        author: '존 번연',
+        totalChapters: 23
+      },
+      'confessions': {
+        title: '고백록',
+        author: '아우구스티누스',
+        totalChapters: 13
+      },
+      'imitation-of-christ': {
+        title: '그리스도를 본받아',
+        author: '토마스 아 켐피스',
+        totalChapters: 114
+      },
+      'holy-war': {
+        title: '거룩한 전쟁',
+        author: '존 번연',
+        totalChapters: 20
+      },
+      'grace-abounding': {
+        title: '죄인의 수장에게 넘치는 은혜',
+        author: '존 번연',
+        totalChapters: 15
+      },
+      'edwards-sermons': {
+        title: '조나단 에드워즈 설교선집',
+        author: '조나단 에드워즈',
+        totalChapters: 8
+      },
+      'paradise-lost': {
+        title: '실낙원',
+        author: '존 밀턴',
+        totalChapters: 12
+      },
+      'around-the-wicket-gate': {
+        title: '좁은 문 앞에서',
+        author: '찰스 스펄전',
+        totalChapters: 12
+      },
+      'paradise-regained': {
+        title: '복낙원',
+        author: '존 밀턴',
+        totalChapters: 4
+      },
+      'foxe-martyrs': {
+        title: '폭스의 순교자 열전',
+        author: '존 폭스',
+        totalChapters: 23
+      },
+      'abide-in-christ': {
+        title: '참된 포도나무',
+        author: '앤드류 머레이',
+        totalChapters: 26
+      },
+      'absolute-surrender': {
+        title: '절대 항복',
+        author: '앤드류 머레이',
+        totalChapters: 7
+      },
+      'apostolic-fathers': {
+        title: '사도교부 문헌집',
+        author: '클레멘트·이그나티우스·폴리카르프 외',
+        totalChapters: 16
+      },
+      'ascent-mount-carmel': {
+        title: '갈멜산 등정',
+        author: '십자가의 요한',
+        totalChapters: 92
+      },
+      'christian-liberty': {
+        title: '기독교인의 자유',
+        author: '마르틴 루터',
+        totalChapters: 3
+      },
+      'city-of-god': {
+        title: '신국론 (선집)',
+        author: '아우구스티누스',
+        totalChapters: 25
+      },
+      'dark-night-of-soul': {
+        title: '어둔 밤',
+        author: '십자가의 요한',
+        totalChapters: 39
+      },
+      'didache': {
+        title: '디다케',
+        author: '미상',
+        totalChapters: 16
+      },
+      'everlasting-man': {
+        title: '영원한 인간',
+        author: 'G.K. 체스터턴',
+        totalChapters: 18
+      },
+      'galatians-luther': {
+        title: '갈라디아서 주석',
+        author: '마르틴 루터',
+        totalChapters: 12
+      },
+      'heretics': {
+        title: '이단자들',
+        author: 'G.K. 체스터턴',
+        totalChapters: 20
+      },
+      'holiness-ryle': {
+        title: '거룩',
+        author: 'J.C. 라일',
+        totalChapters: 29
+      },
+      'humility': {
+        title: '겸손',
+        author: '앤드류 머레이',
+        totalChapters: 12
+      },
+      'incarnation-word': {
+        title: '말씀의 성육신에 관하여',
+        author: '아타나시우스',
+        totalChapters: 9
+      },
+      'institutes-calvin': {
+        title: '기독교 강요',
+        author: '존 칼빈',
+        totalChapters: 122
+      },
+      'interior-castle': {
+        title: '영혼의 성',
+        author: '아빌라의 테레사',
+        totalChapters: 28
+      },
+      'morning-evening': {
+        title: '아침저녁',
+        author: 'C.H. 스펄전',
+        totalChapters: 53
+      },
+      'mortification-of-sin': {
+        title: '죄의 죽임에 관하여',
+        author: '존 오웬',
+        totalChapters: 15
+      },
+      'my-utmost': {
+        title: '지극히 높으신 분을 위한 나의 최선',
+        author: '오스왈드 챔버스',
+        totalChapters: 53
+      },
+      'ninety-five-theses': {
+        title: '95개 논제',
+        author: '마르틴 루터',
+        totalChapters: 1
+      },
+      'orthodoxy': {
+        title: '정통',
+        author: 'G.K. 체스터턴',
+        totalChapters: 9
+      },
+      'pensees-pascal': {
+        title: '팡세',
+        author: '블레즈 파스칼',
+        totalChapters: 30
+      },
+      'prayer-andrew-murray': {
+        title: '중보기도의 사역',
+        author: '앤드류 머레이',
+        totalChapters: 15
+      },
+      'pursuit-of-god': {
+        title: '하나님을 추구함',
+        author: 'A.W. 토저',
+        totalChapters: 10
+      },
+      'religious-affections': {
+        title: '종교적 정서론',
+        author: '조나단 에드워즈',
+        totalChapters: 37
+      },
+      'saints-everlasting-rest': {
+        title: '성도의 영원한 안식',
+        author: '리처드 백스터',
+        totalChapters: 23
+      },
+      'serious-call': {
+        title: '경건하고 거룩한 삶으로의 진지한 부름',
+        author: '윌리엄 로',
+        totalChapters: 24
+      },
+      'st-francis-assisi': {
+        title: '아시시의 성 프란체스코',
+        author: 'G.K. 체스터턴',
+        totalChapters: 10
+      },
+      'streams-in-desert': {
+        title: '사막의 샘물',
+        author: '카우만 부인',
+        totalChapters: 52
+      },
+      'summa-selections': {
+        title: '신학대전 (선집)',
+        author: '토마스 아퀴나스',
+        totalChapters: 25
+      },
+      'talks-to-farmers': {
+        title: '농부들에게 전하는 말씀',
+        author: 'C.H. 스펄전',
+        totalChapters: 25
+      },
+      'true-christianity': {
+        title: '참된 기독교',
+        author: '요한 아른트',
+        totalChapters: 100
+      },
+      'waiting-on-god': {
+        title: '하나님을 기다리며',
+        author: '앤드류 머레이',
+        totalChapters: 31
+      }
+    };
+
+    var meta = BOOK_META[slug] || { title: slug, author: '', totalChapters: 1 };
+
+    async function loadChapter() {
+      var padded = String(ch).padStart(3, '0');
+      var url = 'content/books/' + slug + '/' + padded + '.json';
+
+      try {
+        var resp = await fetch(url);
+        if (!resp.ok) throw new Error('파일 없음');
+        var data = await resp.json();
+
+        var titleEl = document.getElementById('book-title');
+        titleEl.textContent = (data.chapter_title || ch + '장') + ', ' + meta.title;
+        document.title = titleEl.textContent;
+
+        document.getElementById('book-meta').textContent =
+          meta.author + ', ' + ch + '장 / ' + meta.totalChapters + '장';
+
+        document.getElementById('section-translation').textContent =
+          data.modern_translation || '';
+
+        document.getElementById('section-summary').textContent =
+          data.summary || '';
+
+        var kpEl = document.getElementById('section-keypoints');
+        kpEl.textContent = '';
+        (data.key_points || []).forEach(function(point) {
+          var li = document.createElement('li');
+          li.textContent = point;
+          kpEl.appendChild(li);
+        });
+
+        var termsEl = document.getElementById('section-terms');
+        termsEl.textContent = '';
+        (data.difficult_terms || []).forEach(function(term) {
+          var dt = document.createElement('dt');
+          dt.textContent = term.term || '';
+          var dd = document.createElement('dd');
+          dd.textContent = term.explanation || '';
+          dd.style.marginBottom = '0.5rem';
+          termsEl.appendChild(dt);
+          termsEl.appendChild(dd);
+        });
+
+        document.getElementById('section-reflection').textContent =
+          data.reflection || '';
+
+        setupTTS(data);
+      } catch (e) {
+        document.getElementById('book-title').textContent = '콘텐츠를 불러올 수 없습니다';
+        document.getElementById('section-translation').textContent = e.message;
+      }
+
+      setupChapterNav();
+    }
+
+    function setupChapterNav() {
+      var navPairs = [
+        { prev: 'prev-chapter-top', next: 'next-chapter-top', ind: 'chapter-indicator-top' },
+        { prev: 'prev-chapter', next: 'next-chapter', ind: 'chapter-indicator' },
+      ];
+
+      navPairs.forEach(function(pair) {
+        var prevLink = document.getElementById(pair.prev);
+        var nextLink = document.getElementById(pair.next);
+        var indicator = document.getElementById(pair.ind);
+        if (!prevLink || !nextLink || !indicator) return;
+
+        indicator.textContent = ch + ' / ' + meta.totalChapters;
+
+        if (ch > 1) {
+          prevLink.href = 'book.html?slug=' + slug + '&ch=' + (ch - 1);
+        } else {
+          prevLink.style.visibility = 'hidden';
+        }
+
+        if (ch < meta.totalChapters) {
+          nextLink.href = 'book.html?slug=' + slug + '&ch=' + (ch + 1);
+        } else {
+          nextLink.style.visibility = 'hidden';
+        }
+      });
+    }
+
+    function setupTTS(data) {
+      var tts = new TTSController();
+      var progressKey = 'tts-progress:' + slug + ':' + ch;
+      tts.setProgressKey(progressKey);
+
+      var sections = [];
+
+      if (data.modern_translation) {
+        sections.push({ label: '현대어 번역', text: data.modern_translation });
+      }
+      if (data.summary) {
+        sections.push({ label: '요약', text: data.summary });
+      }
+      if (data.key_points && data.key_points.length > 0) {
+        sections.push({ label: '핵심 포인트', text: data.key_points.join('. ') });
+      }
+      if (data.reflection) {
+        sections.push({ label: '묵상', text: data.reflection });
+      }
+
+      tts.setSections(sections);
+
+      // 이어듣기: 저장된 진행 상태 확인
+      var saved = TTSController.getSavedProgress(progressKey);
+      if (saved && saved.sectionIndex < sections.length &&
+          (saved.sectionIndex > 0 || saved.chunkIndex > 0)) {
+        var banner = document.getElementById('resume-banner');
+        var info = document.getElementById('resume-info');
+        var elapsed = Date.now() - saved.timestamp;
+        var agoText = elapsed < 3600000
+          ? Math.round(elapsed / 60000) + '분 전'
+          : elapsed < 86400000
+            ? Math.round(elapsed / 3600000) + '시간 전'
+            : Math.round(elapsed / 86400000) + '일 전';
+        info.textContent = agoText + ' "' + saved.sectionLabel + '" 섹션을 듣고 있었습니다.';
+        banner.style.display = 'block';
+
+        if (saved.rate) {
+          tts.setRate(saved.rate);
+          document.getElementById('speed-select').value = String(saved.rate);
+        }
+
+        document.getElementById('btn-resume').addEventListener('click', function() {
+          banner.style.display = 'none';
+          tts.playFrom(saved.sectionIndex, saved.chunkIndex);
+        });
+
+        document.getElementById('btn-restart').addEventListener('click', function() {
+          banner.style.display = 'none';
+          tts.clearProgress();
+        });
+      }
+
+      // 페이지 이탈 시 진행 저장
+      window.addEventListener('beforeunload', function() {
+        if (tts.isPlaying || tts.isPaused) tts.saveProgress();
+      });
+      document.addEventListener('visibilitychange', function() {
+        if (document.hidden && (tts.isPlaying || tts.isPaused)) tts.saveProgress();
+      });
+
+      // 보이스 선택 UI 초기화
+      var voiceSelect = document.getElementById('voice-select');
+      function populateVoices() {
+        var koreanVoices = tts.getVoices('ko');
+        var allVoices = tts.getVoices();
+        voiceSelect.textContent = '';
+
+        if (koreanVoices.length > 0) {
+          var koGroup = document.createElement('optgroup');
+          koGroup.label = '한국어';
+          koreanVoices.forEach(function(v) {
+            var opt = document.createElement('option');
+            opt.value = v.voiceURI;
+            opt.textContent = v.name + (v.localService ? '' : ' (네트워크)');
+            if (tts.voice && tts.voice.voiceURI === v.voiceURI) opt.selected = true;
+            koGroup.appendChild(opt);
+          });
+          voiceSelect.appendChild(koGroup);
+        }
+
+        // 한국어 외 보이스도 접근 가능하게
+        var otherVoices = allVoices.filter(function(v) { return !v.lang.startsWith('ko'); });
+        if (otherVoices.length > 0) {
+          var otherGroup = document.createElement('optgroup');
+          otherGroup.label = '기타 언어';
+          otherVoices.forEach(function(v) {
+            var opt = document.createElement('option');
+            opt.value = v.voiceURI;
+            opt.textContent = v.name + ' (' + v.lang + ')';
+            if (tts.voice && tts.voice.voiceURI === v.voiceURI) opt.selected = true;
+            otherGroup.appendChild(opt);
+          });
+          voiceSelect.appendChild(otherGroup);
+        }
+
+        if (voiceSelect.options.length === 0) {
+          var fallback = document.createElement('option');
+          fallback.value = '';
+          fallback.textContent = '사용 가능한 보이스 없음';
+          voiceSelect.appendChild(fallback);
+        }
+      }
+      tts.onVoicesReady(populateVoices);
+
+      voiceSelect.addEventListener('change', function(e) {
+        if (e.target.value) tts.setVoice(e.target.value);
+      });
+
+      var statusEl = document.getElementById('tts-status');
+      var playBtn = document.getElementById('btn-play');
+
+      tts.onStatusChange(function(msg) {
+        statusEl.textContent = msg;
+        if (tts.isPlaying && !tts.isPaused) {
+          playBtn.textContent = '\u23F8';
+          playBtn.setAttribute('aria-label', '일시정지');
+        } else {
+          playBtn.textContent = '\u25B6';
+          playBtn.setAttribute('aria-label', '재생');
+        }
+      });
+
+      document.getElementById('btn-play').addEventListener('click', function() { tts.togglePlayPause(); });
+      document.getElementById('btn-stop').addEventListener('click', function() { tts.stop(); });
+      document.getElementById('btn-prev').addEventListener('click', function() { tts.prevSection(); });
+      document.getElementById('btn-next').addEventListener('click', function() { tts.nextSection(); });
+      document.getElementById('speed-select').addEventListener('change', function(e) {
+        tts.setRate(parseFloat(e.target.value));
+      });
+
+      document.addEventListener('keydown', function(e) {
+        if (e.target.tagName === 'INPUT' || e.target.tagName === 'SELECT') return;
+        if (e.code === 'Space') { e.preventDefault(); tts.togglePlayPause(); }
+        else if (e.code === 'ArrowLeft') { tts.prevSection(); }
+        else if (e.code === 'ArrowRight') { tts.nextSection(); }
+      });
+    }
+
+    loadChapter();
+  </script>
+</body>
+</html>

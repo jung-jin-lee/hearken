@@ -1,0 +1,62 @@
+/* 건너뛰기 링크 */
+.skip-link {
+  position: absolute;
+  top: -100%;
+  left: 0;
+  z-index: 1000;
+  padding: 0.75rem 1.5rem;
+  background: #1a1a2e;
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 600;
+  text-decoration: none;
+  border-radius: 0 0 0.5rem 0;
+}
+
+.skip-link:focus {
+  top: 0;
+}
+
+/* 포커스 인디케이터 */
+:focus-visible {
+  outline: 3px solid #4a90d9;
+  outline-offset: 3px;
+}
+
+button:focus-visible,
+a:focus-visible,
+[tabindex]:focus-visible {
+  outline: 3px solid #4a90d9;
+  outline-offset: 3px;
+}
+
+/* 고대비 모드 */
+@media (prefers-contrast: high) {
+  :root {
+    --color-bg: #000;
+    --color-text: #fff;
+    --color-primary: #6db3f2;
+    --color-border: #fff;
+  }
+}
+
+/* 모션 줄이기 */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* 텍스트 크기 조절 지원 */
+html {
+  font-size: clamp(100%, 1vw + 0.5rem, 150%);
+}
+
+/* 선택 영역 */
+::selection {
+  background: var(--color-primary, #4a90d9);
+  color: #fff;
+}

@@ -1,0 +1,29 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+
+# IDE
+.idea/
+.vscode/
+*.swp
+
+# 환경변수
+.env
+.env.local
+
+# Batch API 임시 파일
+pipeline/batch/requests/*.jsonl
+pipeline/batch/results/*.jsonl
+
+# 원본 데이터 (대용량)
+pipeline/sources/data/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Claude
+.claude/
