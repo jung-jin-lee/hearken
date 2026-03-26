@@ -92,9 +92,13 @@ class TTSController {
         if (match) { this.voice = match; }
       }
 
-      // 선호 보이스가 없으면 한국어 기본값
+      // 선호 보이스가 없으면 유나 > Google 한국어 > 한국어 기본값
       if (!this.voice) {
-        this.voice = voices.find(v => v.lang.startsWith('ko')) || voices[0] || null;
+        var nameLC;
+        this.voice = voices.find(v => { nameLC = v.name.toLowerCase(); return nameLC.indexOf('yuna') !== -1; })
+          || voices.find(v => { nameLC = v.name.toLowerCase(); return nameLC.indexOf('google') !== -1 && v.lang.startsWith('ko'); })
+          || voices.find(v => v.lang.startsWith('ko'))
+          || voices[0] || null;
       }
 
       if (this._onVoicesReady) this._onVoicesReady();

@@ -475,46 +475,40 @@
         if (document.hidden && (tts.isPlaying || tts.isPaused)) tts.saveProgress();
       });
 
-      // 보이스 선택 UI 초기화
+      // 보이스 선택 UI 초기화 (유나, Google만 표시)
       var voiceSelect = document.getElementById('voice-select');
       function populateVoices() {
-        var koreanVoices = tts.getVoices('ko');
         var allVoices = tts.getVoices();
+        var filtered = allVoices.filter(function(v) {
+          var name = v.name.toLowerCase();
+          return name.indexOf('yuna') !== -1 || name.indexOf('google') !== -1;
+        });
         voiceSelect.textContent = '';
 
-        if (koreanVoices.length > 0) {
-          var koGroup = document.createElement('optgroup');
-          koGroup.label = '한국어';
-          koreanVoices.forEach(function(v) {
+        if (filtered.length > 0) {
+          filtered.forEach(function(v) {
             var opt = document.createElement('option');
             opt.value = v.voiceURI;
-            opt.textContent = v.name + (v.localService ? '' : ' (네트워크)');
+            opt.textContent = v.name;
             if (tts.voice && tts.voice.voiceURI === v.voiceURI) opt.selected = true;
-            koGroup.appendChild(opt);
+            voiceSelect.appendChild(opt);
           });
-          voiceSelect.appendChild(koGroup);
-        }
-
-        // 한국어 외 보이스도 접근 가능하게
-        var otherVoices = allVoices.filter(function(v) { return !v.lang.startsWith('ko'); });
-        if (otherVoices.length > 0) {
-          var otherGroup = document.createElement('optgroup');
-          otherGroup.label = '기타 언어';
-          otherVoices.forEach(function(v) {
-            var opt = document.createElement('option');
-            opt.value = v.voiceURI;
-            opt.textContent = v.name + ' (' + v.lang + ')';
-            if (tts.voice && tts.voice.voiceURI === v.voiceURI) opt.selected = true;
-            otherGroup.appendChild(opt);
-          });
-          voiceSelect.appendChild(otherGroup);
-        }
-
-        if (voiceSelect.options.length === 0) {
-          var fallback = document.createElement('option');
-          fallback.value = '';
-          fallback.textContent = '사용 가능한 보이스 없음';
-          voiceSelect.appendChild(fallback);
+        } else {
+          var koreanVoices = tts.getVoices('ko');
+          if (koreanVoices.length > 0) {
+            koreanVoices.forEach(function(v) {
+              var opt = document.createElement('option');
+              opt.value = v.voiceURI;
+              opt.textContent = v.name;
+              if (tts.voice && tts.voice.voiceURI === v.voiceURI) opt.selected = true;
+              voiceSelect.appendChild(opt);
+            });
+          } else {
+            var fallback = document.createElement('option');
+            fallback.value = '';
+            fallback.textContent = '사용 가능한 보이스 없음';
+            voiceSelect.appendChild(fallback);
+          }
         }
       }
       tts.onVoicesReady(populateVoices);
