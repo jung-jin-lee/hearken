@@ -1,0 +1,832 @@
+[
+  {
+    "slug": "alcott-little-women",
+    "title": "작은 아씨들",
+    "title_en": "Little Women",
+    "author_kr": "루이자 메이 올콧",
+    "author_en": "Louisa May Alcott",
+    "year": "1868",
+    "url": "https://www.gutenberg.org/cache/epub/514/pg514.txt",
+    "source_type": "auto"
+  },
+  {
+    "slug": "allen-things-korean",
+    "title": "한국에 관한 것들",
+    "title_en": "Things Korean",
+    "author_kr": "호러스 앨런",
+    "author_en": "Horace N. Allen",
+    "year": "1908",
+    "url": "https://archive.org/details/b29351571",
+    "source_type": "auto"
+  },
+  {
+    "slug": "bonar-diary-life",
+    "title": "앤드류 보나르 일기와 생애",
+    "title_en": "Andrew Bonar Diary and Life",
+    "author_kr": "마조리 보나르",
+    "author_en": "Marjory Bonar",
+    "year": "1893",
+    "url": "https://archive.org/download/andrewabonarddd00bonagoog/andrewabonarddd00bonagoog_djvu.txt",
+    "source_type": "auto"
+  },
+  {
+    "slug": "boston-covenant-grace",
+    "title": "은혜 언약",
+    "title_en": "The Covenant of Grace",
+    "author_kr": "토마스 보스턴",
+    "author_en": "Thomas Boston",
+    "year": "1734",
+    "url": "https://archive.org/details/viewofcovenantof02bost",
+    "source_type": "auto"
+  },
+  {
+    "slug": "boston-fourfold-state",
+    "title": "인간의 네 가지 상태",
+    "title_en": "Human Nature in Its Fourfold State",
+    "author_kr": "토마스 보스턴",
+    "author_en": "Thomas Boston",
+    "year": "1720",
+    "url": "https://archive.org/details/bim_eighteenth-century_human-nature-in-its-four_boston-thomas_1788",
+    "source_type": "auto"
+  },
+  {
+    "slug": "boston-memoirs",
+    "title": "토마스 보스턴 회고록",
+    "title_en": "Memoirs of Thomas Boston",
+    "author_kr": "토마스 보스턴",
+    "author_en": "Thomas Boston",
+    "year": "1776",
+    "url": "https://archive.org/details/wholeworkslater01bostgoog",
+    "source_type": "auto"
+  },
+  {
+    "slug": "brooks-cabinet-jewels",
+    "title": "보석 진열장",
+    "title_en": "A Cabinet of Choice Jewels",
+    "author_kr": "토마스 브룩스",
+    "author_en": "Thomas Brooks",
+    "year": "1669",
+    "url": "https://archive.org/details/bim_eighteenth-century_a-cabinet-of-choice-jewe_brooks-thomas_1762",
+    "source_type": "auto"
+  },
+  {
+    "slug": "calvin-commentary-hebrews",
+    "title": "칼빈 주석: 히브리서",
+    "title_en": "Calvin's Commentary: Hebrews",
+    "author_kr": "장 칼빈",
+    "author_en": "John Calvin",
+    "year": "1549",
+    "url": "https://ccel.org/ccel/c/calvin/calcom44/cache/calcom44.txt",
+    "source_type": "auto"
+  },
+  {
+    "slug": "carmichael-lotus-buds",
+    "title": "연꽃 봉오리",
+    "title_en": "Lotus Buds",
+    "author_kr": "에이미 카마이클",
+    "author_en": "Amy Carmichael",
+    "year": "1909",
+    "url": "https://archive.org/details/pts_lotusbuds_3720-1088",
+    "source_type": "auto"
+  },
+  {
+    "slug": "charlesworth-ministering-children",
+    "title": "섬기는 어린이들",
+    "title_en": "Ministering Children",
+    "author_kr": "마리아 찰스워스",
+    "author_en": "Maria Charlesworth",
+    "year": "1854",
+    "url": "https://archive.org/details/ministeringchild00char",
+    "source_type": "auto"
+  },
+  {
+    "slug": "charnock-existence-attributes",
+    "title": "하나님의 존재와 속성",
+    "title_en": "Discourses on the Existence and Attributes of God",
+    "author_kr": "스티븐 차녹",
+    "author_en": "Stephen Charnock",
+    "year": "1682",
+    "url": "https://archive.org/download/bim_eighteenth-century_discourses-upon-the-exis_charnock-stephen_1797/bim_eighteenth-century_discourses-upon-the-exis_charnock-stephen_1797_djvu.txt",
+    "source_type": "auto"
+  },
+  {
+    "slug": "clarke-commentary-nt-v3",
+    "title": "아담 클라크 주석: 서신서",
+    "title_en": "Adam Clarkes Commentary Epistles",
+    "author_kr": "아담 클라크",
+    "author_en": "Adam Clarke",
+    "year": "1832",
+    "url": "https://archive.org/download/holybiblecontain0000unse_u6t6/holybiblecontain0000unse_u6t6_djvu.txt",
+    "source_type": "auto"
+  },
+  {
+    "slug": "clarke-commentary-ot-v2",
+    "title": "아담 클라크 주석: 역사서",
+    "title_en": "Adam Clarkes Commentary Vol 2 Historical Books",
+    "author_kr": "아담 클라크",
+    "author_en": "Adam Clarke",
+    "year": "1832",
+    "url": "https://archive.org/download/holybiblecontai184602clar/holybiblecontai184602clar_djvu.txt",
+    "source_type": "auto"
+  },
+  {
+    "slug": "clarke-commentary-ot-v3",
+    "title": "아담 클라크 주석: 시가서",
+    "title_en": "Adam Clarkes Commentary Vol 3 Poetical Books",
+    "author_kr": "아담 클라크",
+    "author_en": "Adam Clarke",
+    "year": "1832",
+    "url": "https://archive.org/download/holybiblecontai03clar/holybiblecontai03clar_djvu.txt",
+    "source_type": "auto"
+  },
+  {
+    "slug": "clarke-commentary-ot-v4",
+    "title": "아담 클라크 주석: 대선지서",
+    "title_en": "Adam Clarkes Commentary Vol 4 Major Prophets",
+    "author_kr": "아담 클라크",
+    "author_en": "Adam Clarke",
+    "year": "1832",
+    "url": "https://archive.org/download/holybiblecontai04clar/holybiblecontai04clar_djvu.txt",
+    "source_type": "auto"
+  },
+  {
+    "slug": "cowper-poems-select",
+    "title": "윌리엄 쿠퍼 시 선집",
+    "title_en": "The Poems of William Cowper",
+    "author_kr": "윌리엄 쿠퍼",
+    "author_en": "William Cowper",
+    "year": "1782",
+    "url": "https://www.gutenberg.org/cache/epub/3082/pg3082.txt",
+    "source_type": "auto"
+  },
+  {
+    "slug": "dick-lectures-theology",
+    "title": "신학 강의",
+    "title_en": "Lectures on Theology",
+    "author_kr": "존 딕",
+    "author_en": "John Dick",
+    "year": "1836",
+    "url": "https://archive.org/details/sermonspreached04crai",
+    "source_type": "auto"
+  },
+  {
+    "slug": "elizabeth-fry-journal",
+    "title": "엘리자베스 프라이 일기",
+    "title_en": "Memoir of the Life of Elizabeth Fry",
+    "author_kr": "엘리자베스 프라이",
+    "author_en": "Elizabeth Fry",
+    "year": "1847",
+    "url": "https://archive.org/details/memoiroflifeofel01fryeuoft",
+    "source_type": "auto"
+  },
+  {
+    "slug": "farrar-eric-or-little",
+    "title": "에릭 또는 조금씩",
+    "title_en": "Eric or Little by Little",
+    "author_kr": "프레드릭 패러",
+    "author_en": "Frederic W. Farrar",
+    "year": "1858",
+    "url": "https://www.gutenberg.org/cache/epub/24150/pg24150.txt",
+    "source_type": "auto"
+  },
+  {
+    "slug": "finney-lectures-christians",
+    "title": "신앙인에게 보내는 강의",
+    "title_en": "Lectures to Professing Christians",
+    "author_kr": "찰스 피니",
+    "author_en": "Charles G. Finney",
+    "year": "1837",
+    "url": "https://archive.org/details/lecturestoprofes00finn_0",
+    "source_type": "auto"
+  },
+  {
+    "slug": "finney-lectures-revivals",
+    "title": "종교 부흥에 관한 강의",
+    "title_en": "Lectures on Revivals of Religion",
+    "author_kr": "찰스 피니",
+    "author_en": "Charles G. Finney",
+    "year": "1835",
+    "url": "https://www.gutenberg.org/cache/epub/4998/pg4998.txt",
+    "source_type": "auto"
+  },
+  {
+    "slug": "finney-memoirs",
+    "title": "핀니 자서전",
+    "title_en": "Memoirs of Rev Charles G Finney",
+    "author_kr": "찰스 피니",
+    "author_en": "Charles G. Finney",
+    "year": "1876",
+    "url": "https://www.gutenberg.org/cache/epub/4097/pg4097.txt",
+    "source_type": "auto"
+  },
+  {
+    "slug": "finney-systematic-theology",
+    "title": "핀니의 조직신학",
+    "title_en": "Finneys Systematic Theology",
+    "author_kr": "찰스 피니",
+    "author_en": "Charles G. Finney",
+    "year": "1846",
+    "url": "https://ccel.org/ccel/finney/theology/cache/theology.txt",
+    "source_type": "auto"
+  },
+  {
+    "slug": "forsyth-praying-man",
+    "title": "기도의 영혼",
+    "title_en": "The Soul of Prayer",
+    "author_kr": "P.T. 포사이스",
+    "author_en": "P. T. Forsyth",
+    "year": "1916",
+    "url": "https://archive.org/details/soulofprayer0000ptfo_h6g5",
+    "source_type": "auto"
+  },
+  {
+    "slug": "gale-korea-sketches",
+    "title": "한국 스케치",
+    "title_en": "Korean Sketches",
+    "author_kr": "제임스 게일",
+    "author_en": "James Scarth Gale",
+    "year": "1898",
+    "url": "https://archive.org/details/koreansketches00galegoog",
+    "source_type": "auto"
+  },
+  {
+    "slug": "geddie-mission-new-hebrides",
+    "title": "뉴헤브리디스 선교 생애",
+    "title_en": "Nineteen Years in Polynesia",
+    "author_kr": "조지 터너",
+    "author_en": "George Turner",
+    "year": "1861",
+    "url": "https://archive.org/details/nineteenyearsinp00turn",
+    "source_type": "auto"
+  },
+  {
+    "slug": "gifford-every-day-life-korea",
+    "title": "한국의 일상생활",
+    "title_en": "Every-Day Life in Korea",
+    "author_kr": "다니엘 기포드",
+    "author_en": "Daniel L. Gifford",
+    "year": "1898",
+    "url": "https://archive.org/details/everydaylifeinko00giff_0",
+    "source_type": "auto"
+  },
+  {
+    "slug": "gillespie-aaron-rod",
+    "title": "아론의 꽃핀 지팡이",
+    "title_en": "Aarons Rod Blossoming",
+    "author_kr": "조지 길레스피",
+    "author_en": "George Gillespie",
+    "year": "1646",
+    "url": "https://archive.org/details/aablossom00gill",
+    "source_type": "auto"
+  },
+  {
+    "slug": "guyon-method-prayer",
+    "title": "짧은 기도 방법",
+    "title_en": "A Short and Easy Method of Prayer",
+    "author_kr": "귀용 부인",
+    "author_en": "Madame Guyon",
+    "year": "1685",
+    "url": "https://ccel.org/ccel/guyon/prayer/cache/prayer.txt",
+    "source_type": "auto"
+  },
+  {
+    "slug": "havergal-loyal-responses",
+    "title": "충성스런 응답",
+    "title_en": "Loyal Responses",
+    "author_kr": "프란체스 릿지 하벌갈",
+    "author_en": "Frances Ridley Havergal",
+    "year": "1878",
+    "url": "https://archive.org/details/loyalr00have",
+    "source_type": "auto"
+  },
+  {
+    "slug": "havergal-ministry-song",
+    "title": "노래의 사역",
+    "title_en": "Ministry of Song",
+    "author_kr": "프란체스 릿지 하벌갈",
+    "author_en": "Frances Ridley Havergal",
+    "year": "1869",
+    "url": "https://www.gutenberg.org/cache/epub/22289/pg22289.txt",
+    "source_type": "auto"
+  },
+  {
+    "slug": "havergal-royal-bounty",
+    "title": "왕의 풍성한 은혜",
+    "title_en": "Royal Bounty",
+    "author_kr": "프란체스 릿지 하벌갈",
+    "author_en": "Frances Ridley Havergal",
+    "year": "1879",
+    "url": "https://archive.org/details/royalbounty01havegoog",
+    "source_type": "auto"
+  },
+  {
+    "slug": "howe-living-temple",
+    "title": "살아 있는 성전",
+    "title_en": "The Living Temple",
+    "author_kr": "존 하우",
+    "author_en": "John Howe",
+    "year": "1675",
+    "url": "https://archive.org/details/bim_early-english-books-1641-1700_the-living-temple-_howe-john_1675",
+    "source_type": "auto"
+  },
+  {
+    "slug": "judson-life-letters-full",
+    "title": "저드슨의 삶과 편지",
+    "title_en": "The Life of Adoniram Judson",
+    "author_kr": "에드워드 저드슨",
+    "author_en": "Edward Judson",
+    "year": "1883",
+    "url": "https://archive.org/details/lifeofadoniramju0000edwa_s7n0",
+    "source_type": "auto"
+  },
+  {
+    "slug": "law-christian-perfection",
+    "title": "기독교적 완전",
+    "title_en": "Christian Perfection",
+    "author_kr": "윌리엄 로",
+    "author_en": "William Law",
+    "year": "1726",
+    "url": "https://archive.org/details/bim_eighteenth-century_extracts-from-a-practica_law-william_1789",
+    "source_type": "auto"
+  },
+  {
+    "slug": "law-serious-call",
+    "title": "경건한 생활에 대한 진지한 권고",
+    "title_en": "A Serious Call to a Devout and Holy Life",
+    "author_kr": "윌리엄 로",
+    "author_en": "William Law",
+    "year": "1729",
+    "url": "https://www.gutenberg.org/cache/epub/1250/pg1250.txt",
+    "source_type": "auto"
+  },
+  {
+    "slug": "law-spirit-of-love",
+    "title": "사랑의 영",
+    "title_en": "The Spirit of Love",
+    "author_kr": "윌리엄 로",
+    "author_en": "William Law",
+    "year": "1752",
+    "url": "https://archive.org/details/spiritofloveindi00laww",
+    "source_type": "auto"
+  },
+  {
+    "slug": "law-spirit-of-prayer",
+    "title": "기도의 영",
+    "title_en": "The Spirit of Prayer",
+    "author_kr": "윌리엄 로",
+    "author_en": "William Law",
+    "year": "1749",
+    "url": "https://archive.org/details/extractsfromspi00lawgoog",
+    "source_type": "auto"
+  },
+  {
+    "slug": "macgregor-rob-roy",
+    "title": "롭 로이 맥그레거",
+    "title_en": "Rob Roy",
+    "author_kr": "월터 스콧",
+    "author_en": "Sir Walter Scott",
+    "year": "1817",
+    "url": "https://www.gutenberg.org/cache/epub/7025/pg7025.txt",
+    "source_type": "auto"
+  },
+  {
+    "slug": "manton-hundred-ninety-sermons",
+    "title": "설교 선집",
+    "title_en": "One Hundred and Ninety Sermons",
+    "author_kr": "토마스 맨턴",
+    "author_en": "Thomas Manton",
+    "year": "1681",
+    "url": "https://archive.org/details/onehundredninety02mant",
+    "source_type": "auto"
+  },
+  {
+    "slug": "manton-james-commentary",
+    "title": "야고보서 주석",
+    "title_en": "Commentary on James",
+    "author_kr": "토마스 맨턴",
+    "author_en": "Thomas Manton",
+    "year": "1651",
+    "url": "https://archive.org/details/apracticalcomme01mantgoog",
+    "source_type": "auto"
+  },
+  {
+    "slug": "mcheyne-sermons-select",
+    "title": "로버트 머리 맥체인 설교 선집",
+    "title_en": "Sermons of Robert Murray McCheyne",
+    "author_kr": "로버트 머리 맥체인",
+    "author_en": "Robert Murray McCheyne",
+    "year": "1848",
+    "url": "https://archive.org/download/sermonsofrevrobe00mcheiala/sermonsofrevrobe00mcheiala_djvu.txt",
+    "source_type": "auto"
+  },
+  {
+    "slug": "meyer-back-to-bethel",
+    "title": "벧엘로 돌아가라",
+    "title_en": "Back to Bethel",
+    "author_kr": "F.B. 마이어",
+    "author_en": "F. B. Meyer",
+    "year": "1901",
+    "url": "https://archive.org/details/backtobethelsepa00meyeuoft",
+    "source_type": "auto"
+  },
+  {
+    "slug": "meyer-elijah-power",
+    "title": "엘리야와 그의 능력의 비결",
+    "title_en": "Elijah and the Secret of His Power",
+    "author_kr": "F.B. 마이어",
+    "author_en": "F. B. Meyer",
+    "year": "1901",
+    "url": "https://archive.org/details/elijahsecretofhi0000meye_i7h5",
+    "source_type": "auto"
+  },
+  {
+    "slug": "meyer-jeremiah-priest",
+    "title": "예레미야: 제사장과 선지자",
+    "title_en": "Jeremiah Priest and Prophet",
+    "author_kr": "F.B. 마이어",
+    "author_en": "F. B. Meyer",
+    "year": "1894",
+    "url": "https://archive.org/details/jeremiahpriestpr0000meye",
+    "source_type": "auto"
+  },
+  {
+    "slug": "meyer-moses-servant",
+    "title": "하나님의 종 모세",
+    "title_en": "Moses the Servant of God",
+    "author_kr": "F.B. 마이어",
+    "author_en": "F. B. Meyer",
+    "year": "1893",
+    "url": "https://archive.org/details/mosestheservanto00meyeuoft",
+    "source_type": "auto"
+  },
+  {
+    "slug": "meyer-paul-servant",
+    "title": "바울: 예수 그리스도의 종",
+    "title_en": "Paul A Servant of Jesus Christ",
+    "author_kr": "F.B. 마이어",
+    "author_en": "F. B. Meyer",
+    "year": "1897",
+    "url": "https://archive.org/details/bwb_S0-ATB-671",
+    "source_type": "auto"
+  },
+  {
+    "slug": "meyer-secret-guidance",
+    "title": "인도하심의 비결",
+    "title_en": "The Secret of Guidance",
+    "author_kr": "F.B. 마이어",
+    "author_en": "F. B. Meyer",
+    "year": "1896",
+    "url": "https://archive.org/details/secretofguidance0000fbme",
+    "source_type": "auto"
+  },
+  {
+    "slug": "nettleton-asahel-memoir",
+    "title": "아사헬 네틀턴 회고록",
+    "title_en": "Memoir of the Life and Character of Asahel Nettleton",
+    "author_kr": "베넷 타일러",
+    "author_en": "Bennet Tyler",
+    "year": "1844",
+    "url": "https://archive.org/details/memoirlifeandch02tylegoog",
+    "source_type": "auto"
+  },
+  {
+    "slug": "newton-cardiphonia",
+    "title": "마음의 고백: 서신집",
+    "title_en": "Cardiphonia or The Utterance of the Heart",
+    "author_kr": "존 뉴턴",
+    "author_en": "John Newton",
+    "year": "1781",
+    "url": "https://archive.org/details/bim_eighteenth-century_cardiphonia-or-the-utt_newton-john_1787_1",
+    "source_type": "auto"
+  },
+  {
+    "slug": "newton-letters-select",
+    "title": "존 뉴턴 서신 선집",
+    "title_en": "Letters of John Newton",
+    "author_kr": "존 뉴턴",
+    "author_en": "John Newton",
+    "year": "1780",
+    "url": "https://archive.org/details/bim_eighteenth-century_letters-sermons-and-a-_newton-john_1780_2",
+    "source_type": "auto"
+  },
+  {
+    "slug": "palmer-entire-devotion",
+    "title": "하나님께 전적 헌신",
+    "title_en": "Entire Devotion to God",
+    "author_kr": "피비 팔머",
+    "author_en": "Phoebe Palmer",
+    "year": "1845",
+    "url": "https://archive.org/details/presenttomychri00palmgoog",
+    "source_type": "auto"
+  },
+  {
+    "slug": "palmer-faith-and-effects",
+    "title": "믿음과 그 열매",
+    "title_en": "Faith and Its Effects",
+    "author_kr": "피비 팔머",
+    "author_en": "Phoebe Palmer",
+    "year": "1848",
+    "url": "https://archive.org/details/faithitseffectso00palm",
+    "source_type": "auto"
+  },
+  {
+    "slug": "palmer-way-of-holiness",
+    "title": "성결의 길",
+    "title_en": "The Way of Holiness",
+    "author_kr": "피비 팔머",
+    "author_en": "Phoebe Palmer",
+    "year": "1843",
+    "url": "https://archive.org/details/wayofholinesswit01palm",
+    "source_type": "auto"
+  },
+  {
+    "slug": "paton-autobiography-v1",
+    "title": "페이튼 선교사 자서전 제1권",
+    "title_en": "John G Paton Missionary to the New Hebrides Vol 1",
+    "author_kr": "존 G. 페이튼",
+    "author_en": "John G. Paton",
+    "year": "1889",
+    "url": "https://www.gutenberg.org/cache/epub/10736/pg10736.txt",
+    "source_type": "auto"
+  },
+  {
+    "slug": "paton-autobiography-v2",
+    "title": "페이튼 선교사 자서전 제2권",
+    "title_en": "John G Paton Missionary to the New Hebrides Vol 2",
+    "author_kr": "존 G. 페이튼",
+    "author_en": "John G. Paton",
+    "year": "1889",
+    "url": "https://www.gutenberg.org/cache/epub/10737/pg10737.txt",
+    "source_type": "auto"
+  },
+  {
+    "slug": "robertson-word-pictures-nt",
+    "title": "신약 성경의 단어 그림",
+    "title_en": "Word Pictures in the New Testament",
+    "author_kr": "A.T. 로버트슨",
+    "author_en": "A. T. Robertson",
+    "year": "1930",
+    "url": "https://archive.org/details/wordpicturesinne03robe_0",
+    "source_type": "auto"
+  },
+  {
+    "slug": "rutherford-letters",
+    "title": "새뮤얼 러더퍼드 서신집",
+    "title_en": "The Letters of Samuel Rutherford",
+    "author_kr": "새뮤얼 러더퍼드",
+    "author_en": "Samuel Rutherford",
+    "year": "1664",
+    "url": "https://archive.org/details/lettersofrevsamu1834ruth",
+    "source_type": "auto"
+  },
+  {
+    "slug": "rutherford-lex-rex",
+    "title": "렉스 렉스: 법과 왕",
+    "title_en": "Lex Rex The Law and the Prince",
+    "author_kr": "새뮤얼 러더퍼드",
+    "author_en": "Samuel Rutherford",
+    "year": "1644",
+    "url": "https://archive.org/details/lexrexlawandpri00ruthgoog",
+    "source_type": "auto"
+  },
+  {
+    "slug": "rutherford-trial-of-faith",
+    "title": "믿음의 시험과 승리",
+    "title_en": "The Trial and Triumph of Faith",
+    "author_kr": "새뮤얼 러더퍼드",
+    "author_en": "Samuel Rutherford",
+    "year": "1645",
+    "url": "https://archive.org/details/trialtrium00ruth",
+    "source_type": "auto"
+  },
+  {
+    "slug": "shepard-parable-ten-virgins",
+    "title": "열 처녀의 비유",
+    "title_en": "The Parable of the Ten Virgins",
+    "author_kr": "토마스 셰퍼드",
+    "author_en": "Thomas Shepard",
+    "year": "1660",
+    "url": "https://ccel.org/ccel/shepard/worksthomas/cache/worksthomas.txt",
+    "source_type": "auto"
+  },
+  {
+    "slug": "sherwood-history-fairchild",
+    "title": "페어차일드 가족 이야기",
+    "title_en": "The History of the Fairchild Family",
+    "author_kr": "메리 마사 셔우드",
+    "author_en": "Mary Martha Sherwood",
+    "year": "1818",
+    "url": "https://www.gutenberg.org/cache/epub/13275/pg13275.txt",
+    "source_type": "auto"
+  },
+  {
+    "slug": "slessor-mary-calabar",
+    "title": "칼라바르의 메리 슬레서",
+    "title_en": "Mary Slessor of Calabar Pioneer Missionary",
+    "author_kr": "W.P. 리빙스턴",
+    "author_en": "W. P. Livingstone",
+    "year": "1915",
+    "url": "https://archive.org/details/maryslessorofcal1910livi",
+    "source_type": "auto"
+  },
+  {
+    "slug": "smeaton-doctrine-holy-spirit",
+    "title": "성령론",
+    "title_en": "The Doctrine of the Holy Spirit",
+    "author_kr": "조지 스미턴",
+    "author_en": "George Smeaton",
+    "year": "1882",
+    "url": "https://archive.org/details/doctrineofholysp00smea",
+    "source_type": "auto"
+  },
+  {
+    "slug": "steer-george-muller",
+    "title": "하나님 안에서 기뻐하는 조지 뮬러",
+    "title_en": "The Life of Trust",
+    "author_kr": "조지 뮬러",
+    "author_en": "George Muller",
+    "year": "1885",
+    "url": "https://www.gutenberg.org/cache/epub/2753/pg2753.txt",
+    "source_type": "auto"
+  },
+  {
+    "slug": "stretton-jessica-first-prayer",
+    "title": "제시카의 첫 기도",
+    "title_en": "Jessicas First Prayer",
+    "author_kr": "헤즈바 스트레튼",
+    "author_en": "Hesba Stretton",
+    "year": "1867",
+    "url": "https://www.gutenberg.org/cache/epub/29006/pg29006.txt",
+    "source_type": "auto"
+  },
+  {
+    "slug": "stretton-little-meg",
+    "title": "꼬마 메그의 아이들",
+    "title_en": "Little Megs Children",
+    "author_kr": "헤즈바 스트레튼",
+    "author_en": "Hesba Stretton",
+    "year": "1868",
+    "url": "https://www.gutenberg.org/cache/epub/18851/pg18851.txt",
+    "source_type": "auto"
+  },
+  {
+    "slug": "stretton-pilgrim-street",
+    "title": "순례자 거리",
+    "title_en": "Pilgrim Street A Story of Manchester Life",
+    "author_kr": "헤즈바 스트레튼",
+    "author_en": "Hesba Stretton",
+    "year": "1867",
+    "url": "https://www.gutenberg.org/cache/epub/18906/pg18906.txt",
+    "source_type": "auto"
+  },
+  {
+    "slug": "swallen-mission-field-korea",
+    "title": "한국 선교 전장 (선집)",
+    "title_en": "The Korea Mission Field",
+    "author_kr": "Various",
+    "author_en": "Various missionaries",
+    "year": "1910",
+    "url": "https://archive.org/download/korea-mission-field_1907-02_3_2/korea-mission-field_1907-02_3_2_djvu.txt",
+    "source_type": "auto"
+  },
+  {
+    "slug": "thayers-greek-lexicon",
+    "title": "세이어 신약 헬라어-영어 사전",
+    "title_en": "Thayers Greek-English Lexicon",
+    "author_kr": "조셉 세이어",
+    "author_en": "Joseph Henry Thayer",
+    "year": "1889",
+    "url": "https://archive.org/download/greekenglishlexi00grimuoft/greekenglishlexi00grimuoft_djvu.txt",
+    "source_type": "auto"
+  },
+  {
+    "slug": "torrey-power-prayer",
+    "title": "기도의 능력",
+    "title_en": "The Power of Prayer",
+    "author_kr": "R.A. 토레이",
+    "author_en": "R. A. Torrey",
+    "year": "1924",
+    "url": "https://archive.org/details/powerofprayerpra00torr",
+    "source_type": "auto"
+  },
+  {
+    "slug": "torrey-prayer-revival",
+    "title": "기도하는 방법",
+    "title_en": "How to Pray",
+    "author_kr": "R.A. 토레이",
+    "author_en": "R. A. Torrey",
+    "year": "1900",
+    "url": "https://ccel.org/ccel/torrey/pray/cache/pray.txt",
+    "source_type": "auto"
+  },
+  {
+    "slug": "underwood-call-of-korea",
+    "title": "한국의 부름",
+    "title_en": "The Call of Korea",
+    "author_kr": "호레이스 언더우드",
+    "author_en": "Horace Grant Underwood",
+    "year": "1908",
+    "url": "https://archive.org/details/cu31924022946887",
+    "source_type": "auto"
+  },
+  {
+    "slug": "underwood-korean-language",
+    "title": "한국어 입문",
+    "title_en": "An Introduction to the Korean Spoken Language",
+    "author_kr": "호레이스 언더우드",
+    "author_en": "Horace Grant Underwood",
+    "year": "1890",
+    "url": "https://archive.org/details/anintroductiont00undegoog",
+    "source_type": "auto"
+  },
+  {
+    "slug": "watson-body-of-divinity",
+    "title": "신앙의 보고",
+    "title_en": "A Body of Divinity",
+    "author_kr": "토마스 왓슨",
+    "author_en": "Thomas Watson",
+    "year": "1692",
+    "url": "https://ccel.org/ccel/watson/divinity/cache/divinity.txt",
+    "source_type": "auto"
+  },
+  {
+    "slug": "watson-godly-man-picture",
+    "title": "경건한 사람의 모습",
+    "title_en": "The Godly Mans Picture",
+    "author_kr": "토마스 왓슨",
+    "author_en": "Thomas Watson",
+    "year": "1666",
+    "url": "https://archive.org/details/bim_early-english-books-1641-1700_the-godly-mans-picture-_watson-thomas_1666",
+    "source_type": "auto"
+  },
+  {
+    "slug": "watson-heaven-taken-by-storm",
+    "title": "강력함으로 빼앗는 하늘 나라",
+    "title_en": "Heaven Taken by Storm",
+    "author_kr": "토마스 왓슨",
+    "author_en": "Thomas Watson",
+    "year": "1669",
+    "url": "https://archive.org/details/bim_eighteenth-century_heaven-taken-by-storm-o_watson-thomas_1788",
+    "source_type": "auto"
+  },
+  {
+    "slug": "watson-sermon-on-mount",
+    "title": "산상수훈 선집 설교",
+    "title_en": "Select Sermons",
+    "author_kr": "토마스 왓슨",
+    "author_en": "Thomas Watson",
+    "year": "1686",
+    "url": "https://archive.org/details/bodyofpracticald00wats_1",
+    "source_type": "auto"
+  },
+  {
+    "slug": "watts-divine-songs-children",
+    "title": "어린이를 위한 찬송",
+    "title_en": "Divine Songs for Children",
+    "author_kr": "이삭 와츠",
+    "author_en": "Isaac Watts",
+    "year": "1715",
+    "url": "https://www.gutenberg.org/cache/epub/5958/pg5958.txt",
+    "source_type": "auto"
+  },
+  {
+    "slug": "watts-hymns-spiritual-songs",
+    "title": "찬송과 영적 노래",
+    "title_en": "Hymns and Spiritual Songs",
+    "author_kr": "이삭 와츠",
+    "author_en": "Isaac Watts",
+    "year": "1707",
+    "url": "https://www.gutenberg.org/cache/epub/6830/pg6830.txt",
+    "source_type": "auto"
+  },
+  {
+    "slug": "watts-improvement-of-mind",
+    "title": "마음의 개선",
+    "title_en": "The Improvement of the Mind",
+    "author_kr": "이삭 와츠",
+    "author_en": "Isaac Watts",
+    "year": "1741",
+    "url": "https://www.gutenberg.org/cache/epub/35135/pg35135.txt",
+    "source_type": "auto"
+  },
+  {
+    "slug": "whitefield-letters-select",
+    "title": "조지 휫필드 서신 선집",
+    "title_en": "Select Letters of George Whitefield",
+    "author_kr": "조지 휫필드",
+    "author_en": "George Whitefield",
+    "year": "1771",
+    "url": "https://archive.org/details/aselectcollecti00whitgoog",
+    "source_type": "auto"
+  },
+  {
+    "slug": "yonge-little-duke",
+    "title": "어린 공작",
+    "title_en": "The Little Duke",
+    "author_kr": "샬롯 영",
+    "author_en": "Charlotte M. Yonge",
+    "year": "1854",
+    "url": "https://www.gutenberg.org/cache/epub/3820/pg3820.txt",
+    "source_type": "auto"
+  }
+]
