@@ -1,0 +1,176 @@
+#!/usr/bin/env python3
+"""Phase 6 배치 D: 카테고리 54-55 (프린스턴 정통주의, 구약 주석 명저) — 20권."""
+import sys
+from pathlib import Path
+sys.path.insert(0, str(Path(__file__).parent.parent.parent))
+from pipeline.scripts.phase5_utils import process_all
+
+BOOKS = [
+    # ── 카테고리 54: 프린스턴 정통주의 (10권) ──
+    {
+        "slug": "hodge-systematic-theology-v1",
+        "title": "조직신학 제1권: 신론",
+        "title_en": "Systematic Theology Vol.1: Theology Proper",
+        "author_kr": "찰스 호지",
+        "author_en": "Charles Hodge",
+        "year": 1872,
+        "ccel_author": "hodge",
+        "ccel_work": "systematic_theology",
+    },
+    {
+        "slug": "hodge-systematic-theology-v2",
+        "title": "조직신학 제2권: 인간론·구원론",
+        "title_en": "Systematic Theology Vol.2: Anthropology & Soteriology",
+        "author_kr": "찰스 호지",
+        "author_en": "Charles Hodge",
+        "year": 1872,
+    },
+    {
+        "slug": "hodge-systematic-theology-v3",
+        "title": "조직신학 제3권: 교회론·종말론",
+        "title_en": "Systematic Theology Vol.3: Ecclesiology & Eschatology",
+        "author_kr": "찰스 호지",
+        "author_en": "Charles Hodge",
+        "year": 1872,
+    },
+    {
+        "slug": "hodge-commentary-romans",
+        "title": "로마서 주석",
+        "title_en": "Commentary on Romans",
+        "author_kr": "찰스 호지",
+        "author_en": "Charles Hodge",
+        "year": 1835,
+    },
+    {
+        "slug": "hodge-commentary-ephesians",
+        "title": "에베소서 주석",
+        "title_en": "Commentary on Ephesians",
+        "author_kr": "찰스 호지",
+        "author_en": "Charles Hodge",
+        "year": 1856,
+    },
+    {
+        "slug": "aa-hodge-outlines-theology",
+        "title": "신학 개요",
+        "title_en": "Outlines of Theology",
+        "author_kr": "A.A. 호지",
+        "author_en": "A.A. Hodge",
+        "year": 1879,
+    },
+    {
+        "slug": "aa-hodge-evangelical-theology",
+        "title": "복음주의 신학",
+        "title_en": "Evangelical Theology",
+        "author_kr": "A.A. 호지",
+        "author_en": "A.A. Hodge",
+        "year": 1890,
+    },
+    {
+        "slug": "warfield-plan-of-salvation",
+        "title": "구원의 계획",
+        "title_en": "The Plan of Salvation",
+        "author_kr": "B.B. 워필드",
+        "author_en": "B.B. Warfield",
+        "year": 1915,
+    },
+    {
+        "slug": "warfield-lord-of-glory",
+        "title": "영광의 주님",
+        "title_en": "The Lord of Glory",
+        "author_kr": "B.B. 워필드",
+        "author_en": "B.B. Warfield",
+        "year": 1907,
+    },
+    {
+        "slug": "warfield-faith-and-life",
+        "title": "신앙과 생활",
+        "title_en": "Faith and Life",
+        "author_kr": "B.B. 워필드",
+        "author_en": "B.B. Warfield",
+        "year": 1916,
+    },
+    # ── 카테고리 55: 구약 주석 명저 (10권) ──
+    {
+        "slug": "delitzsch-psalms-v1",
+        "title": "시편 주석 제1권",
+        "title_en": "Commentary on Psalms Vol.1 (Ps 1–72)",
+        "author_kr": "프란츠 델리취",
+        "author_en": "Franz Delitzsch",
+        "year": 1871,
+    },
+    {
+        "slug": "delitzsch-psalms-v2",
+        "title": "시편 주석 제2권",
+        "title_en": "Commentary on Psalms Vol.2 (Ps 73–150)",
+        "author_kr": "프란츠 델리취",
+        "author_en": "Franz Delitzsch",
+        "year": 1871,
+    },
+    {
+        "slug": "delitzsch-isaiah-v1",
+        "title": "이사야 주석 제1권",
+        "title_en": "Commentary on Isaiah Vol.1 (chaps 1–39)",
+        "author_kr": "프란츠 델리취",
+        "author_en": "Franz Delitzsch",
+        "year": 1867,
+    },
+    {
+        "slug": "delitzsch-isaiah-v2",
+        "title": "이사야 주석 제2권",
+        "title_en": "Commentary on Isaiah Vol.2 (chaps 40–66)",
+        "author_kr": "프란츠 델리취",
+        "author_en": "Franz Delitzsch",
+        "year": 1867,
+    },
+    {
+        "slug": "ja-alexander-isaiah-v1",
+        "title": "이사야 주석 제1권",
+        "title_en": "Commentary on Isaiah Vol.1",
+        "author_kr": "조셉 애디슨 알렉산더",
+        "author_en": "Joseph Addison Alexander",
+        "year": 1846,
+    },
+    {
+        "slug": "ja-alexander-isaiah-v2",
+        "title": "이사야 주석 제2권",
+        "title_en": "Commentary on Isaiah Vol.2",
+        "author_kr": "조셉 애디슨 알렉산더",
+        "author_en": "Joseph Addison Alexander",
+        "year": 1846,
+    },
+    {
+        "slug": "ja-alexander-psalms",
+        "title": "시편 번역과 해설",
+        "title_en": "The Psalms Translated and Explained",
+        "author_kr": "조셉 애디슨 알렉산더",
+        "author_en": "Joseph Addison Alexander",
+        "year": 1850,
+    },
+    {
+        "slug": "keil-daniel",
+        "title": "다니엘서 주석",
+        "title_en": "Commentary on Daniel",
+        "author_kr": "C.F. 카일",
+        "author_en": "C.F. Keil",
+        "year": 1877,
+    },
+    {
+        "slug": "keil-minor-prophets-v1",
+        "title": "소선지서 주석 제1권",
+        "title_en": "Commentary on Minor Prophets Vol.1",
+        "author_kr": "C.F. 카일",
+        "author_en": "C.F. Keil",
+        "year": 1868,
+    },
+    {
+        "slug": "keil-minor-prophets-v2",
+        "title": "소선지서 주석 제2권",
+        "title_en": "Commentary on Minor Prophets Vol.2",
+        "author_kr": "C.F. 카일",
+        "author_en": "C.F. Keil",
+        "year": 1868,
+    },
+]
+
+if __name__ == "__main__":
+    process_all(BOOKS)

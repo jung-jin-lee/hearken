@@ -1,0 +1,191 @@
+#!/usr/bin/env python3
+"""Phase 6 배치 F: 카테고리 58-60 (침례교 신학, 프랑스·스위스 설교, 기독교 사회윤리) — 22권."""
+import sys
+from pathlib import Path
+sys.path.insert(0, str(Path(__file__).parent.parent.parent))
+from pipeline.scripts.phase5_utils import process_all
+
+BOOKS = [
+    # ── 카테고리 58: 침례교 신학 고전 (8권) ──
+    {
+        "slug": "fuller-gospel-worthy",
+        "title": "모든 사람이 받기 합당한 복음",
+        "title_en": "The Gospel Worthy of All Acceptation",
+        "author_kr": "앤드류 풀러",
+        "author_en": "Andrew Fuller",
+        "year": 1785,
+    },
+    {
+        "slug": "fuller-complete-works-sel",
+        "title": "전집 (선집: 속죄·기도·선교)",
+        "title_en": "Complete Works (selections: Atonement, Prayer, Missions)",
+        "author_kr": "앤드류 풀러",
+        "author_en": "Andrew Fuller",
+        "year": 1836,
+    },
+    {
+        "slug": "gill-body-divinity-sel",
+        "title": "신학총론 (선집)",
+        "title_en": "A Body of Divinity (selections)",
+        "author_kr": "존 길",
+        "author_en": "John Gill",
+        "year": 1769,
+    },
+    {
+        "slug": "hall-robert-works-sel",
+        "title": "로버트 홀 전집 (선집)",
+        "title_en": "Works of Robert Hall (selections)",
+        "author_kr": "로버트 홀",
+        "author_en": "Robert Hall",
+        "year": 1839,
+    },
+    {
+        "slug": "booth-reign-of-grace",
+        "title": "은혜의 통치",
+        "title_en": "The Reign of Grace",
+        "author_kr": "에이브러햄 부스",
+        "author_en": "Abraham Booth",
+        "year": 1768,
+    },
+    {
+        "slug": "carey-enquiry",
+        "title": "이방인 선교에 관한 탐구",
+        "title_en": "An Enquiry into the Obligations of Christians to Use Means for the Conversion of the Heathens",
+        "author_kr": "윌리엄 캐리",
+        "author_en": "William Carey",
+        "year": 1792,
+    },
+    {
+        "slug": "ryland-life-of-carey",
+        "title": "풀러의 생애와 사역",
+        "title_en": "The Life and Death of Andrew Fuller (+ Carey memoir)",
+        "author_kr": "존 라일런드",
+        "author_en": "John Ryland",
+        "year": 1816,
+    },
+    {
+        "slug": "nettleton-sermons",
+        "title": "아사헬 넷틀턴 설교집",
+        "title_en": "Sermons of Asahel Nettleton",
+        "author_kr": "아사헬 넷틀턴",
+        "author_en": "Asahel Nettleton",
+        "year": 1844,
+    },
+    # ── 카테고리 59: 프랑스·스위스 개신교 설교 (6권) ──
+    {
+        "slug": "monod-farewell-sermons",
+        "title": "아돌프 모노 고별 설교집",
+        "title_en": "Farewell Sermons of Adolphe Monod",
+        "author_kr": "아돌프 모노",
+        "author_en": "Adolphe Monod",
+        "year": 1856,
+    },
+    {
+        "slug": "monod-living-for-god",
+        "title": "하나님을 위한 삶 (설교집)",
+        "title_en": "Living for God (Sermons)",
+        "author_kr": "아돌프 모노",
+        "author_en": "Adolphe Monod",
+        "year": 1849,
+    },
+    {
+        "slug": "malan-sermons-letters",
+        "title": "체사르 말란 설교와 서신",
+        "title_en": "Sermons and Letters of César Malan",
+        "author_kr": "체사르 말란",
+        "author_en": "César Malan",
+        "year": 1865,
+    },
+    {
+        "slug": "vinet-homiletics",
+        "title": "설교학",
+        "title_en": "Homiletics: Pastoral Theology of Preaching",
+        "author_kr": "알렉상드르 비네",
+        "author_en": "Alexandre Vinet",
+        "year": 1853,
+    },
+    {
+        "slug": "gaussen-theopneustia",
+        "title": "신령감: 성경의 완전 영감",
+        "title_en": "Theopneustia: The Plenary Inspiration of Holy Scripture",
+        "author_kr": "루이 고센",
+        "author_en": "Louis Gaussen",
+        "year": 1841,
+    },
+    {
+        "slug": "merle-biographies-sel",
+        "title": "인물 연구: 칼빈·낙스·크랜머",
+        "title_en": "Biographical Studies (Calvin, Knox, Cranmer)",
+        "author_kr": "J.H. 메를 도비녜",
+        "author_en": "J.H. Merle d'Aubigné",
+        "year": 1870,
+    },
+    # ── 카테고리 60: 기독교 사회윤리 고전 (8권) ──
+    {
+        "slug": "wilberforce-practical-view",
+        "title": "유행하는 종교 체계에 대한 실천적 관점",
+        "title_en": "A Practical View of the Prevailing Religious System",
+        "author_kr": "윌리엄 윌버포스",
+        "author_en": "William Wilberforce",
+        "year": 1797,
+    },
+    {
+        "slug": "hannah-more-practical-piety",
+        "title": "실천적 경건",
+        "title_en": "Practical Piety",
+        "author_kr": "한나 모어",
+        "author_en": "Hannah More",
+        "year": 1811,
+    },
+    {
+        "slug": "hannah-more-religion-heart",
+        "title": "마음의 종교",
+        "title_en": "Religion of the Heart",
+        "author_kr": "한나 모어",
+        "author_en": "Hannah More",
+        "year": 1812,
+    },
+    {
+        "slug": "chalmers-application-christianity",
+        "title": "일상 생활에 기독교 적용",
+        "title_en": "The Application of Christianity to the Commercial and Ordinary Affairs of Life",
+        "author_kr": "토마스 찰머스",
+        "author_en": "Thomas Chalmers",
+        "year": 1820,
+    },
+    {
+        "slug": "chalmers-astronomical-discourses",
+        "title": "천문학적 설교들",
+        "title_en": "Astronomical Discourses",
+        "author_kr": "토마스 찰머스",
+        "author_en": "Thomas Chalmers",
+        "year": 1817,
+    },
+    {
+        "slug": "chalmers-christian-social-economy",
+        "title": "대도시의 기독교·시민 경제 (선집)",
+        "title_en": "On the Christian and Civic Economy of Large Towns (sel.)",
+        "author_kr": "토마스 찰머스",
+        "author_en": "Thomas Chalmers",
+        "year": 1821,
+    },
+    {
+        "slug": "beecher-harriet-uncle-toms-key",
+        "title": "엉클 톰의 오두막을 위한 열쇠",
+        "title_en": "A Key to Uncle Tom's Cabin (Christian argument)",
+        "author_kr": "해리엇 비처 스토우",
+        "author_en": "Harriet Beecher Stowe",
+        "year": 1853,
+    },
+    {
+        "slug": "bushnell-christian-nurture",
+        "title": "기독교적 양육",
+        "title_en": "Christian Nurture",
+        "author_kr": "호러스 부시넬",
+        "author_en": "Horace Bushnell",
+        "year": 1847,
+    },
+]
+
+if __name__ == "__main__":
+    process_all(BOOKS)
