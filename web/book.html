@@ -97,7 +97,6 @@
       <option value="1" selected>1배</option>
       <option value="1.25">1.25배</option>
       <option value="1.5">1.5배</option>
-      <option value="2">2배</option>
     </select>
     <div id="tts-status" class="tts-status" role="status" aria-live="polite">준비됨</div>
   </div>
@@ -3686,18 +3685,14 @@
         if (document.hidden && (tts.isPlaying || tts.isPaused)) tts.saveProgress();
       });
 
-      // 보이스 선택 UI 초기화 (유나, Google만 표시)
+      // 보이스 선택 UI 초기화 (ko-KR 전체 목록)
       var voiceSelect = document.getElementById('voice-select');
       function populateVoices() {
-        var allVoices = tts.getVoices();
-        var filtered = allVoices.filter(function(v) {
-          var name = v.name.toLowerCase();
-          return name.indexOf('yuna') !== -1 || name.indexOf('google') !== -1;
-        });
+        var koreanVoices = tts.getVoices('ko');
         voiceSelect.textContent = '';
 
-        if (filtered.length > 0) {
-          filtered.forEach(function(v) {
+        if (koreanVoices.length > 0) {
+          koreanVoices.forEach(function(v) {
             var opt = document.createElement('option');
             opt.value = v.voiceURI;
             opt.textContent = v.name;
@@ -3705,21 +3700,10 @@
             voiceSelect.appendChild(opt);
           });
         } else {
-          var koreanVoices = tts.getVoices('ko');
-          if (koreanVoices.length > 0) {
-            koreanVoices.forEach(function(v) {
-              var opt = document.createElement('option');
-              opt.value = v.voiceURI;
-              opt.textContent = v.name;
-              if (tts.voice && tts.voice.voiceURI === v.voiceURI) opt.selected = true;
-              voiceSelect.appendChild(opt);
-            });
-          } else {
-            var fallback = document.createElement('option');
-            fallback.value = '';
-            fallback.textContent = '사용 가능한 보이스 없음';
-            voiceSelect.appendChild(fallback);
-          }
+          var fallback = document.createElement('option');
+          fallback.value = '';
+          fallback.textContent = '사용 가능한 보이스 없음';
+          voiceSelect.appendChild(fallback);
         }
       }
       tts.onVoicesReady(populateVoices);
