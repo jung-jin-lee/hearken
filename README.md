@@ -134,6 +134,6 @@ hearken/
 ## 기여
 
 Issues와 Pull Request를 환영합니다.
-버그 신고, 콘텐츠 오류 제보, 접근성 개선 제안 모두 歡迎합니다.
+버그 신고, 콘텐츠 오류 제보, 접근성 개선 제안 모두 환영합니다.
 
 [이슈 등록하기](https://github.com/jung-jin-lee/hearken/issues)
