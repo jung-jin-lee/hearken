@@ -326,13 +326,13 @@
 | # | slug | 영문 제목 | 한국어 제목 | 저자 | 사망 | 챕터 | 소스 |
 |---|------|----------|-----------|------|------|------|------|
 | 1402 | wilberforce-practical-view | A Practical View of the Prevailing Religious System | 유행하는 종교 체계에 대한 실천적 관점 | William Wilberforce | 1833 | 15 | Gutenberg / Archive |
-| 1403 | hannah-more-practical-piety | Practical Piety | 실천적 경건 | Hannah More | 1833 | 15 | Archive / Gutenberg |
+| 1403 | hannah-more-coelebs | Cœlebs in Search of a Wife | 아내를 찾는 콜렙스 — 기독교적 결혼과 가정 윤리 소설 | Hannah More | 1833 | 15 | Gutenberg (#3875) |
 | 1404 | hannah-more-religion-heart | Religion of the Heart | 마음의 종교 | Hannah More | 1833 | 12 | Archive |
 | 1405 | chalmers-application-christianity | The Application of Christianity to the Commercial and Ordinary Affairs of Life | 일상 생활에 기독교 적용 | Thomas Chalmers | 1847 | 15 | Archive / Gutenberg |
 | 1406 | chalmers-astronomical-discourses | Astronomical Discourses | 천문학적 설교들 | Thomas Chalmers | 1847 | 10 | Gutenberg / Archive |
 | 1407 | chalmers-christian-social-economy | On the Christian and Civic Economy of Large Towns (sel.) | 대도시의 기독교·시민 경제 (선집) | Thomas Chalmers | 1847 | 12 | Archive |
 | 1408 | beecher-harriet-uncle-toms-key | A Key to Uncle Tom's Cabin (Christian argument) | 엉클 톰의 오두막을 위한 열쇠 | Harriet Beecher Stowe | 1896 | 15 | Gutenberg |
-| 1409 | bushnell-christian-nurture | Christian Nurture | 기독교적 양육 | Horace Bushnell | 1876 | 15 | Archive / Gutenberg |
+| 1409 | gladstone-impregnable-rock | The Impregnable Rock of Holy Scripture | 성경의 난공불락의 바위 | W.E. Gladstone | 1890 | 12 | Archive / Gutenberg |
 
 **소계**: 8권, ~109챕터, 예상 비용 ~$22
 
@@ -346,10 +346,10 @@
 
 | # | slug | 영문 제목 | 한국어 제목 | 저자 | 사망 | 챕터 | 소스 |
 |---|------|----------|-----------|------|------|------|------|
-| 1410 | spener-pia-desideria | Pia Desideria (Pious Desires) | 경건한 소망 | Philip Jakob Spener | 1705 | 10 | Archive / CCEL |
+| 1410 | spener-spiritual-priesthood | The Spiritual Priesthood (Das Geistliche Priestertum) | 영적 제사장직 — 경건주의 만인제사장론의 원천 | Philipp Jakob Spener | 1705 | 10 | Archive |
 | 1411 | francke-autobiography | Autobiography of A.H. Francke | 프랑케 자서전 | August Hermann Francke | 1727 | 10 | Archive |
-| 1412 | francke-guide-scripture | A Guide to the Reading of Holy Scripture | 성경 읽기 안내 | August Hermann Francke | 1727 | 10 | Archive / CCEL |
-| 1413 | zinzendorf-nine-lectures | Nine Public Lectures on Important Subjects in Religion | 종교의 주요 주제에 관한 아홉 강의 | Nikolaus von Zinzendorf | 1760 | 10 | Archive |
+| 1412 | francke-pietas-hallensis | Pietas Hallensis: Footsteps of a Divine Providence | 하나님 섭리의 발자취: 할레 고아원 설립 기록 | August Hermann Francke | 1727 | 12 | Gutenberg / Archive |
+| 1413 | zinzendorf-sixteen-discourses | Sixteen Discourses on the Savior (Büdingsche Sammlung) | 구주에 관한 열여섯 편의 설교 | Nikolaus von Zinzendorf | 1760 | 10 | Archive |
 | 1414 | tersteegen-quiet-way-sel | The Quiet Way: Letters and Writings (selections) | 조용한 길: 서신과 저술 (선집) | Gerhard Tersteegen | 1769 | 12 | Archive |
 | 1415 | bengel-ordered-life | Ordered Life: Letters and Journal (selections) | 질서 잡힌 삶: 서신과 일기 (선집) | Johann Albrecht Bengel | 1752 | 10 | Archive |
 
@@ -405,7 +405,7 @@
 
 | # | slug | 영문 제목 | 한국어 제목 | 저자 | 사망 | 챕터 | 소스 |
 |---|------|----------|-----------|------|------|------|------|
-| 1430 | manton-james-commentary | Commentary on James (complete) | 야고보서 주석 (전체) | Thomas Manton | 1677 | 20 | CCEL / Archive |
+| 1430 | manton-jude-commentary | Exposition of the Epistle of Jude | 유다서 강해 | Thomas Manton | 1677 | 12 | CCEL / Archive |
 | 1431 | manton-119th-psalm-v1 | An Exposition of Psalm 119 Vol.1 | 시편 119편 강해 제1권 | Thomas Manton | 1677 | 20 | Archive |
 | 1432 | manton-119th-psalm-v2 | An Exposition of Psalm 119 Vol.2 | 시편 119편 강해 제2권 | Thomas Manton | 1677 | 20 | Archive |
 | 1433 | charnock-works-regeneration | The Works: On Regeneration | 전집: 중생론 | Stephen Charnock | 1680 | 15 | Archive |
@@ -432,8 +432,8 @@
 | 1442 | martyn-journals-letters | Journals and Letters of Henry Martyn | 헨리 마틴 일기와 서신 | Samuel Wilberforce (ed.) | 1813 | 20 | Archive / Gutenberg |
 | 1443 | judson-memoir | Memoir of Mrs. Ann H. Judson | 앤 저드슨 전기 | James D. Knowles | 1829 | 15 | Archive / Gutenberg |
 | 1444 | duff-india-missions-sel | India and India Missions (selections) | 인도와 인도 선교 (선집) | Alexander Duff | 1890 | 15 | Archive |
-| 1445 | paton-autobiography-v1 | John G. Paton Autobiography Vol.1 | 존 G. 페이튼 자서전 제1권 | John G. Paton | 1907 | 20 | Gutenberg / Archive |
-| 1446 | paton-autobiography-v2 | John G. Paton Autobiography Vol.2 | 존 G. 페이튼 자서전 제2권 | John G. Paton | 1907 | 20 | Gutenberg / Archive |
+| 1445 | chalmers-work-adventure | Work and Adventure in New Guinea | 뉴기니에서의 사역과 모험 (후에 식인 부족에게 순교) | James Chalmers & W.W. Gill | 1885 | 15 | Archive / Gutenberg |
+| 1446 | patteson-life-melanesia-sel | Life of John Coleridge Patteson: Missionary Bishop (sel.) | 멜라네시아 선교 주교 패터슨의 생애 (선집) | Charlotte M. Yonge | 1874 | 20 | Gutenberg / Archive |
 | 1447 | gilmour-among-mongols | Among the Mongols | 몽골인들 사이에서 | James Gilmour | 1891 | 15 | Gutenberg / Archive |
 | 1448 | mackay-hero-uganda | Mackay of Uganda (biography) | 우간다의 영웅 맥케이 | A.M. Mackay's Sister | 1890 | 15 | Gutenberg |
 
@@ -457,13 +457,13 @@
 | 57. 19세기 위대한 설교가들 | 14 | 237 | ~$47 |
 | 58. 침례교 신학 고전 | 8 | 111 | ~$22 |
 | 59. 프랑스·스위스 개신교 설교 | 6 | 81 | ~$16 |
-| 60. 기독교 사회윤리 고전 | 8 | 109 | ~$22 |
-| 61. 독일 경건주의 창시 문헌 | 6 | 62 | ~$12 |
+| 60. 기독교 사회윤리 고전 | 8 | 106 | ~$21 |
+| 61. 독일 경건주의 창시 문헌 | 6 | 64 | ~$13 |
 | 62. 스코틀랜드 자유교회 신학 | 7 | 94 | ~$19 |
 | 63. 조직신학 보조 명저 | 7 | 101 | ~$20 |
-| 64. 미등록 개혁주의 설교자들 | 9 | 137 | ~$27 |
-| 65. 부흥과 영성 1차 사료 | 10 | 162 | ~$32 |
-| **합계** | **168권** | **2,441챕터** | **~$506** |
+| 64. 미등록 개혁주의 설교자들 | 9 | 129 | ~$25 |
+| 65. 부흥과 영성 1차 사료 | 10 | 157 | ~$31 |
+| **합계** | **168권** | **2,427챕터** | **~$502** |
 
 ---
 
